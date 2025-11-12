@@ -1,3 +1,25 @@
 .title{
     color: #013B84;
 }
+.navigationBar{
+    color:#000000;
+    background-color: #c3bfe8c5;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 5px;
+}
+.titlenaemo{
+    background-color:#c3bfe8c5;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 5px;
+}
+article{
+    background-color:#c3bfe8c5;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 5px;
+}
+.box{
+    background-color:rgb(113, 113, 113);
+}
