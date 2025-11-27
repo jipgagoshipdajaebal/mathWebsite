@@ -83,17 +83,29 @@ main article {
 
 /* 사이드바 영역 */
 aside {
-  position: relative;
+  align-self: start;        /* grid에서 위쪽에 딱 붙도록 */
+  position: sticky;         /* 스크롤 시 고정 */
+  top: 80px;                /* 네비게이션 바 바로 아래쯤에서 고정 (값은 조절 가능) */
 }
 
-/* 스크롤 시 상단에 고정되도록 */
+/* 사이드바 안의 내용 배치 */
 .aside-inner {
-  position: sticky;
-  top: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
+/* 반응형: 화면이 좁을 때 1열 + 사이드바 고정 해제 */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr; /* 1열 */
+  }
+
+  aside {
+    position: static;  /* 모바일에서는 고정 해제 */
+  }
+}
+
 
 /* 사이드바 안의 개별 위젯 */
 .widget {
@@ -119,21 +131,10 @@ aside {
   font-size: 0.95rem;
 }
 
-/* 반응형: 화면이 좁을 때 1열로 정렬 */
-@media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 1fr; /* 1열 */
-  }
-
-  .aside-inner {
-    position: static; /* 고정 해제 */
-  }
-}
 .grayLink {
-  color: #555555;       /* 회색 */
-  text-decoration: none; /* 밑줄 제거 */
+  color: #555555;       
+  text-decoration: none; 
 }
 p {
   text-indent: 20px;
 }
-
