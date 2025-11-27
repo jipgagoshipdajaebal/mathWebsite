@@ -23,6 +23,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-wrap: wrap;          /* ✅ 줄바꿈 허용 */
+    justify-content: center;  /* (선택) 가운데 정렬 */
 }
 
 .navigationBar a{
@@ -76,7 +78,7 @@ main article {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* 사이드바 영역 */
