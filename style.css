@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 .navigationBar a{
     display: inline-block;
     padding: 8px 14px;
-    background-color: #4190e2;
+    background-color: #7c9799c5;
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -36,11 +36,11 @@ h1, h2, h3, h4, h5, h6 {
     transition: background-color 0.2s;
 }
 .navigationBar a:hover{
-    background-color: #357ac8;
+    background-color: #5c7476c5;
 }
 
 .navigationBar a:active{
-   background-color: #2c5ea8;
+   background-color: #465a5cd8;
 }
 .titlenaemo{
     background-color:#bfe7e8c5;
