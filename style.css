@@ -80,31 +80,36 @@ main article {
   border-radius: 12px;
   padding: 15px;
 }
-
-/* 사이드바 영역 */
+/* 사이드바 전체(오른쪽 칸)를 sticky로 */
 aside {
-  align-self: start;        /* grid에서 위쪽에 딱 붙도록 */
-  position: sticky;         /* 스크롤 시 고정 */
-  top: 80px;                /* 네비게이션 바 바로 아래쯤에서 고정 (값은 조절 가능) */
+  align-self: start;      /* grid에서 위쪽 정렬 */
+  position: sticky;
+  top: 80px;              /* 네비게이션 바 아래로 적당히 떨어지는 위치 (숫자 조절 가능) */
 }
 
-/* 사이드바 안의 내용 배치 */
+/* 사이드바 안 실제 내용 박스 */
 .aside-inner {
+  max-height: calc(100vh - 120px); /* 화면 높이 - (네비게이션 + 여백) 대충 값, 필요하면 조정 */
+  overflow-y: auto;                /* 내용이 넘치면 사이드바 안에서만 스크롤 */
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* 반응형: 화면이 좁을 때 1열 + 사이드바 고정 해제 */
+
+
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr; /* 1열 */
   }
 
-  aside {
-    position: static;  /* 모바일에서는 고정 해제 */
+  .aside-inner {
+    position: static;        /* sticky 해제 */
+    max-height: none;        /* 높이 제한 해제 */
+    overflow-y: visible;     /* 스크롤바 제거 */
   }
 }
+
 
 
 /* 사이드바 안의 개별 위젯 */
