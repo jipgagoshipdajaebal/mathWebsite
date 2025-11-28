@@ -46,9 +46,9 @@
       <article>
         <h3>예제 1</h3>
         <img src="문제1.png">
-        <button class="show-solution-btn" onclick="toggleSolution()">풀이 보기</button>
+        <button class="show-solution-btn" onclick="toggleSolution('solution1')">풀이 보기</button>
 
-        <div id="solution" class="solution">
+        <div id="solution1" class="solution">
           <img src="sol1.png" alt="풀이 이미지">
         </div>
 
@@ -57,9 +57,9 @@
       <article>
         <h3>예제 2</h3>
         <img src="문제2.png">
-        <button class="show-solution-btn" onclick="toggleSolution()">풀이 보기</button>
+        <button class="show-solution-btn" onclick="toggleSolution('solution2')">풀이 보기</button>
 
-        <div id="solution" class="solution">
+        <div id="solution2" class="solution">
           <img src="sol2.png" alt="풀이 이미지">
         </div>
 
@@ -90,18 +90,25 @@
   </div>
 
   <footer>
+    <br>
+    <br>
     <address>본 페이지는 수학3 창의적인 작품 만들기 수행평가를 목적으로 일부 페이지만 만들어진 웹페이지이며 소개글에 있는 대로 기능하지 않을 수 있다는 점을 알립니다.</address>
+    <br>
+    <br>
   </footer>
   <script>
-    function toggleSolution() {
-       const sol = document.getElementById("solution");
-       if (sol.style.display === "none" || sol.style.display === "") {
-            sol.style.display = "block";      // 보이게
-        } else {
-            sol.style.display = "none";       // 다시 숨김
-        }
+function toggleSolution(id) {
+    const sol = document.getElementById(id);
+    if (!sol) return;  // 방어 코드
+
+    if (sol.style.display === "none" || sol.style.display === "") {
+        sol.style.display = "block";
+    } else {
+        sol.style.display = "none";
     }
-  </script>
+}
+</script>
+
 
 </body> 
 </html>
