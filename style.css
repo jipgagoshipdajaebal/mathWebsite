@@ -102,11 +102,11 @@ aside {
   .layout {
     grid-template-columns: 1fr; /* 1열 */
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   main article{
-     padding: 12px;
+     padding: 6px;
   }
 
   .widget {
@@ -156,4 +156,9 @@ aside {
 }
 p {
   text-indent: 20px;
+}
+.blackLink {
+  color: rgb(15, 22, 77);       
+  text-decoration: none; 
+  font-weight: bold;
 }
