@@ -92,6 +92,17 @@ main article {
   border-radius: 12px;
   padding: 15px;
 }
+
+img {
+    max-width: 100%;           /* 영역을 넘지 않도록 */
+    height: auto;              /* 비율 유지 */
+    display: block;            /* 이미지 아래 여백 생성 + 가운데 정렬 가능 */
+    margin: 18px auto;         /* 위·아래 여백 + 가운데 정렬 */
+    border-radius: 10px;       /* 둥근 모서리 (사이트 분위기 맞춤) */
+}
+
+
+
 /* 사이드바 전체(오른쪽 칸)를 sticky로 */
 aside {
   align-self: start;      /* grid에서 위쪽 정렬 */
@@ -136,6 +147,10 @@ aside {
 }
 
 
+.solution {
+    display: none;   /* 처음에는 숨김 */
+    margin-top: 15px;
+}
 
 
 /* 사이드바 안의 개별 위젯 */

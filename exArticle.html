@@ -16,7 +16,7 @@
    <div class="navigationBar">
       <nav aria-label="주요 메뉴">
         <ul>
-          <li><a href="index.html" class="nav-btn">site info</a></li>
+          <li><a href="index.html" class="nav-btn">About</a></li>
           <li><a href="notMade.html" class="nav-btn">Notice</a></li>
           <li><a href="notMade.html" class="nav-btn">Articles</a></li>
           <li><a href="notMade.html" class="nav-btn">Images</a></li>
@@ -34,11 +34,35 @@
   <div class="layout" role="region" aria-label="본문 및 사이드바">
     <main>
       <article>
-        <h3></h3>
+        <h3>수렴하는 수열의 극한의 정의</h3>
         <hr>
         <p>
-          
+          {a_n}이 실수열이고 L이 실수라고 하자. 이때, "{a_n}이 L에 수렴한다."를 엄밀하게 정의하면 다음과 같다.
         </p>
+        <img src="수열의 극한 정의 식.png">
+        다음 문제들로 연습해보자.(처음으로 이 내용을 학습한다면 먼저 풀이를 보고 따라 써 보는 것을 추천한다. 그 이후에 풀이를 보지 않고 풀어보자.)
+      </article>
+      <br>
+      <article>
+        <h3>예제 1</h3>
+        <img src="문제1.png">
+        <button class="show-solution-btn" onclick="toggleSolution()">풀이 보기</button>
+
+        <div id="solution" class="solution">
+          <img src="sol1.png" alt="풀이 이미지">
+        </div>
+
+      </article>
+      <br>
+      <article>
+        <h3>예제 2</h3>
+        <img src="문제2.png">
+        <button class="show-solution-btn" onclick="toggleSolution()">풀이 보기</button>
+
+        <div id="solution" class="solution">
+          <img src="sol2.png" alt="풀이 이미지">
+        </div>
+
       </article>
     </main>
 
@@ -49,7 +73,7 @@
           <p>
             이 웹페이지는 2025년 수학3 "창의적 작품 만들기" 수행평가를 위한 작품으로, 첫 번째 페이지를 중심으로 제작되었으며, 
             상당수의 기능들이 작동하지 않습니다. <a href="index.html" class="blackLink"><strong>페이지 소개</strong></a>에 나와있는 설명은 "이러한 사이트를 만들어 보고 싶다", 또는 
-            "이러한 기능을 가진 웹페이지는 어떻게 디자인해야 할까" 정도로 받아들여주시면 감사하겠습니다. 제가 의도한 글의 예시는 <a href="exArticle.html" class="blackLink">수렴하는 극한의 정의에 대한 예시 글</a>을 
+            "이러한 기능을 가진 웹페이지는 어떻게 디자인해야 할까" 정도로 받아들여주시면 감사하겠습니다. 제가 의도한 이 웹사이트의 글의 예시는 <a href="exArticle.html" class="blackLink">수렴하는 극한의 정의에 대한 예시 글</a>을 
             참고해 주시면 되겠습니다.
           </p>
         </section>
@@ -68,5 +92,16 @@
   <footer>
     <address>본 페이지는 수학3 창의적인 작품 만들기 수행평가를 목적으로 일부 페이지만 만들어진 웹페이지이며 소개글에 있는 대로 기능하지 않을 수 있다는 점을 알립니다.</address>
   </footer>
+  <script>
+    function toggleSolution() {
+       const sol = document.getElementById("solution");
+       if (sol.style.display === "none" || sol.style.display === "") {
+            sol.style.display = "block";      // 보이게
+        } else {
+            sol.style.display = "none";       // 다시 숨김
+        }
+    }
+  </script>
+
 </body> 
 </html>
