@@ -101,8 +101,8 @@ article{
 
 /* 본문(article) 기본 스타일 */
 main article {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+  background-color: #ffffffab;
+  border: 1px solid #ffffffab;
   border-radius: 12px;
   padding: 15px;
 }
@@ -162,8 +162,8 @@ aside {
 
 /* 사이드바 안의 개별 위젯 */
 .widget {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+  background-color: #d3cff5bb;
+  border: 1px solid #d3cff5bb;
   border-radius: 12px;
   padding: 16px;
 }

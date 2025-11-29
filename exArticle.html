@@ -49,7 +49,7 @@
       <article>
         <h3>예제 1</h3>
         <img src="문제1.png">
-        <button class="show-solution-btn" onclick="toggleSolution('solution1')">풀이 보기</button>
+        <button class="show-solution-btn" onclick="toggleSolution('solution1', this)">풀이 보기</button>
 
         <div id="solution1" class="solution">
           <img src="sol1.png" alt="풀이 이미지">
@@ -60,7 +60,7 @@
       <article>
         <h3>예제 2</h3>
         <img src="문제2.png">
-        <button class="show-solution-btn" onclick="toggleSolution('solution2')">풀이 보기</button>
+        <button class="show-solution-btn" onclick="toggleSolution('solution2', this)">풀이 보기</button>
 
         <div id="solution2" class="solution">
           <img src="sol2.png" alt="풀이 이미지">
@@ -100,17 +100,27 @@
     <br>
   </footer>
   <script>
-function toggleSolution(id) {
+function toggleSolution(id, btn) {
     const sol = document.getElementById(id);
     if (!sol) return;  // 방어 코드
 
-    if (sol.style.display === "none" || sol.style.display === "") {
+    const isHidden =
+      sol.style.display === "none" ||
+      sol.style.display === ""     ||
+      getComputedStyle(sol).display === "none";
+
+    if (isHidden) {
+        // 풀이가 현재 숨겨져 있으면 → 보이게
         sol.style.display = "block";
+        if (btn) btn.textContent = "풀이 접기";
     } else {
+        // 풀이가 보이는 중이면 → 숨기기
         sol.style.display = "none";
+        if (btn) btn.textContent = "풀이 보기";
     }
 }
 </script>
+
 
 
 </body> 
