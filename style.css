@@ -196,3 +196,8 @@ p {
   text-decoration: none; 
   font-weight: bold;
 }
+.redLink {
+  color: rgb(77, 15, 15);       
+  text-decoration: none; 
+  font-weight: bold;
+}
